@@ -1,0 +1,9 @@
+
+n = int(input())
+for i in range(0,n):
+    x = input().split(' ')
+    x = [int(i) for i in x]
+    if sum(x)%3 == 0 and max(x) <= min(x)*2:
+        print('YES')
+    else:
+        print('NO')

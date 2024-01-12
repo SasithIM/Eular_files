@@ -1,0 +1,5 @@
+with '0079_keylog.txt'
+
+use a pencil, lol
+
+ans = 73162890
