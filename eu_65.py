@@ -14,4 +14,4 @@ for i in range(3*n):
     last=next
 
 print(sum([int(i) for i in str(next.numerator)]))
-# print(next.numerator)
+# print(next.numerator) 
