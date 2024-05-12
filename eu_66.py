@@ -1,17 +1,18 @@
 from math import sqrt
 
-maxx = 0
-for d in range(1000):
-    if (sqrt(d)-int(sqrt(d))):
-        x,y = 1,1
+max_y=0
+for i in range(1,1001):
+    x=sqrt(i)
+    if x-int(x):
+        j=1
         while True:
-            x = sqrt(1+d*(y*y))
-            if not(x-int(x)):
+            if not(sqrt(1+i*j**2)%1):
+                y=sqrt(1+i*j**2)
+                if y>max_y:
+                    max_y=y
                 break
-            y+=1;print(d,y)
-        if x>maxx:
-            maxx=x
-print(maxx)
+            j+=1
+            print(i,j)
+    print(i,'\n')
 
-
-#takes waayyy too long. might need a different way to solve
+print(max_y)

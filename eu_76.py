@@ -1,19 +1,15 @@
-# target=
-# def com_count(n):
-#     count=0 ; nums=[i for i in range(1,n)] ; i=1
-#     while True:
-#         rest = target - n*i
-#         if rest==0:
-#             return count
-#         for j in nums:
-#             if not(rest%j):
-#                 count+=1
-#         i+=1
-#         if n*i>target:
-#             return count
-# ways=1
-# for i in range(2,target):
-#     ways+=com_count(i)
-#     print(i,com_count(i))
-# print(ways)
+def count(num):
+    counter = 0
+    if num==2:
+        counter+=2
+    else:
+        counter+=count(num-1)
+    return counter
 
+def count2(num):
+    counter2=0
+    for i in range(num,num//2,-1):
+        counter2+=count(num)
+    return counter2
+
+print(count2(6))
