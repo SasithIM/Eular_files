@@ -1,14 +1,12 @@
-from math import ceil
-from decimal import *
+string = 'we45667788999jgdsdfvbngreq12edgju4'
+while True:
+    try:
+        n=int(input(': '))
+    except:
+        break
+    out = ''
 
-getcontext().prec = (10000)
+    for i in string:
+        out += chr(ord(i)-n)
 
-# k =int(input())
-a = Decimal(2)
-
-
-def nk(k):
-    return (((1+a.sqrt())**(4*k)-2+(1-a.sqrt())**(4*k))/32).to_integral_value(rounding=ROUND_CEILING)
-
-for i in range(100):
-    print(nk(i)%20)
+    print(out)
